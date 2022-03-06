@@ -1,0 +1,10 @@
+/var/log/electrs/electrs.log {
+        create 640 bitcoin bitcoin
+        daily
+        rotate 14
+        compress
+        sharedscripts
+        postrotate
+            killall -HUP electrs
+        endscript
+}
